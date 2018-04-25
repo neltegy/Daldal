@@ -6,7 +6,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/api/user/write" method="get">
+<form action="/cli/user/postsubmit" method="post">
 		<!-- 구분 -->
 		<select name="division" id="division">
 		    <option value="couple" selected="selected">연인</option>
@@ -17,12 +17,12 @@
 		</select><br>
 		
 		<!-- 날짜 -->
-		<input type="text" name="month" id="month">월<br>
-		<input type="text" name="day" id="day">일<br>
+		<input type="text" name="month" id="month" value="12">월<br>
+		<input type="text" name="day" id="day" value="31">일<br>
 		
 		<!-- 시간 -->
-		am:<input type="text" name="startTime" id="startTime" >시<br>
-		pm:<input type="text" name="endTime" id="endTime" >시<br>
+		am:<input type="text" name="starttime" id="startTime" value="13">시<br>
+		pm:<input type="text" name="endtime" id="endTime" value="20">시<br>
 		
 		<!-- 인원수 -->
 		<select name="peopleNo" id="peopleNo">
@@ -37,18 +37,18 @@
 		</select><br>
 		
 		<!-- 총 비용 계산기 계산된값만 받는걸로 -->
-		<input type="text" name="cost" id="cost">총 비용<br>
+		<input type="text" name="cost" id="cost" value="60000">총 비용<br>
 		
 		<!-- 봉사/헌혈 체크박스 -->
 		<input type="checkbox" name="volunteer" value="volunteer">봉사/헌혈<br>
 		
 		<!-- 지역 -->
-		<input type="text" name="city" id="city">시<br>
-		<input type="text" name="borough" id="borough">구<br>
-		<input type="text" name="dong" id="dong">동<br>
+		<input type="text" name="city" id="city" value="서울">시
+		<input type="text" name="borough" id="borough" value="은평">구
+		<input type="text" name="dong" id="dong" value="불광">동<br>
 		
 		<!-- 반경 -->
-		<input type="text" name="radius" id="radius">반경<br>
+		<input type="text" name="radius" id="radius" value="2">반경<br>
 		
 		<input type="submit" value="작성완료">
 	</form>

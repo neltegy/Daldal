@@ -18,12 +18,13 @@ public class UserInterceptor extends HandlerInterceptorAdapter{
 			throws Exception {
 		HttpSession session = request.getSession();
 		UserLoginVo userloginvo = (UserLoginVo) session.getAttribute("authUser");
-		if(userloginvo == null) {
+		/*if(userloginvo == null) {
 			response.sendRedirect("/main");
 			return false;
 		}else {
 			return true;
-		}
+		}*/
+		return true;
 	}
 	
 	@Override

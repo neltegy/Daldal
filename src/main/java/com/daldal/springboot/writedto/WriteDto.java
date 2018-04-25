@@ -1,12 +1,9 @@
 package com.daldal.springboot.writedto;
 
-import org.springframework.data.annotation.Id;
 
-public class WriteMongoDto {
+public class WriteDto {
 	
-	@Id
 	private String id;
-	
 	private String division;
 	private int month;
 	private int day;
@@ -19,12 +16,12 @@ public class WriteMongoDto {
 	private String borough;
 	private String dong;
 	private float radius; // 0.5 , 1 , 1.5 , 2.0 
-	public WriteMongoDto() {
+	public WriteDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public WriteMongoDto(String id, String division, int month, int day, int starttime, int endtime, int peopleno,
-			int cost, String volunteer, String city, String borough, String dong, float radius) {
+	public WriteDto(String id, String division, int month, int day, int starttime, int endtime, int peopleno, int cost,
+			String volunteer, String city, String borough, String dong, float radius) {
 		super();
 		this.id = id;
 		this.division = division;
@@ -120,10 +117,11 @@ public class WriteMongoDto {
 	}
 	@Override
 	public String toString() {
-		return "WriteMongoDto [id=" + id + ", division=" + division + ", month=" + month + ", day=" + day
-				+ ", starttime=" + starttime + ", endtime=" + endtime + ", peopleno=" + peopleno + ", cost=" + cost
-				+ ", volunteer=" + volunteer + ", city=" + city + ", borough=" + borough + ", dong=" + dong
-				+ ", radius=" + radius + "]";
+		return "WriteDto [id=" + id + ", division=" + division + ", month=" + month + ", day=" + day + ", starttime="
+				+ starttime + ", endtime=" + endtime + ", peopleno=" + peopleno + ", cost=" + cost + ", volunteer="
+				+ volunteer + ", city=" + city + ", borough=" + borough + ", dong=" + dong + ", radius=" + radius + "]";
 	}
+	
+	
 	
 }

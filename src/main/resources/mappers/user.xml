@@ -6,12 +6,12 @@
 		<![CDATA[
 			select id
 			from users
-			where id = #{joinIdCheck}
+			where id = #{joinidcheck}
 		]]>
 	</select>
 	
 	<select id="selectNickNameByUserIdAndPw" 
-			parameterType="com.daldal.springboot.userdto.UserLoginDto" 
+			parameterType="Map" 
 			resultType="com.daldal.springboot.uservo.UserLoginVo">
 		<![CDATA[
 			select nickname
@@ -20,4 +20,18 @@
 			  and pw = #{pw}
 		]]>
 	</select>
+
+	<insert id="insertUserJoinDto" parameterType="com.daldal.springboot.userdto.UserJoinDto">
+		<![CDATA[
+			insert into users
+			values(#{id}
+			      ,#{nickname}
+			      ,#{pw}
+			      ,#{age}
+				  ,#{email}
+			      ,sysdate
+			)
+		]]>
+	</insert>
+
 </mapper>

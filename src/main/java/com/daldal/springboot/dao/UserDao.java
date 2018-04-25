@@ -1,9 +1,12 @@
 package com.daldal.springboot.dao;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.daldal.springboot.mapper.UserMapper;
+import com.daldal.springboot.userdto.UserJoinDto;
 import com.daldal.springboot.userdto.UserLoginDto;
 import com.daldal.springboot.uservo.UserLoginVo;
 
@@ -11,12 +14,15 @@ import com.daldal.springboot.uservo.UserLoginVo;
 public class UserDao {
 	
 	@Autowired
-	UserMapper usermapper;
+	private UserMapper usermapper;
 	
-	public UserLoginVo selectNickNameByUserIdAndPw(UserLoginDto userlogindto) {
-		
-		UserLoginVo userloginvo = usermapper.selectNickNameByUserIdAndPw(userlogindto);
-		
+	public UserLoginVo selectNickNameByUserIdAndPw(Map<String, String> map) {
+		UserLoginVo userloginvo = usermapper.selectNickNameByUserIdAndPw(map);
 		return userloginvo;
+	}
+
+	public void insertUserJoinDto(UserJoinDto userjoindto) {
+		// TODO Auto-generated method stub
+		usermapper.insertUserJoinDto(userjoindto);
 	}
 }
